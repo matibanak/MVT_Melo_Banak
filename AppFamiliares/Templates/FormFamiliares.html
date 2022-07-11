@@ -10,7 +10,7 @@
     <h1> formulario de Familiares</h1>
 
     {% if formulario.errors %}
-     <p style="color:red">HAY ALGO MAL EN EL FORMUALCIO </p>
+     <p style="color:red">Error en los datos ingresados en el formulario </p>
     {% endif %}
      <form action="{% url 'FamiliaresFormulario' %}" method="POST"> {% csrf_token %}
 

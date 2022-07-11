@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mvt_mb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Matias/cluster_python/cluster/MVT_MB/mvt_mb/Template.html/'],
+        'DIRS': ['C:/Users/Matias/cluster_python/cluster/MVT_MB/mvt_mb/Template/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

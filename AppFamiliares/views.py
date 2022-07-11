@@ -93,3 +93,41 @@ def FamiliaresFormulario(request):
         
     return render(request, "C:/Users/Matias/cluster_python/cluster/MVT_Grupo_Melo_Bañak/mvt_mb/AppFamiliares/Templates/FormFamiliares.html", {"formulario":form})
 
+def NegociosFormulario(request):
+
+    if (request.method=="POST"):
+        form= NegociosForm(request.POST)
+        print(form)
+        if form.is_valid():
+            info = form.cleaned_data
+            nombre1= info["nombre1"]
+            provincia= info["provincia"]
+            pais=["pais"]
+            telefono= info["telefono"]
+
+            form= Negocios(nombre1=nombre1, provincia=provincia, pais=pais, telefono=telefono)
+            form.save()
+            return render (request, "C:/Users/Matias/cluster_python/cluster/MVT_Grupo_Melo_Bañak/mvt_mb/AppFamiliares/Templates/inicio.html")
+    else:
+        form=NegociosForm()
+        
+    return render(request, "C:/Users/Matias/cluster_python/cluster/MVT_Grupo_Melo_Bañak/mvt_mb/AppFamiliares/Templates/FormNegocios.html", {"formulario":form})
+
+def InmobiliariosFormulario(request):
+
+    if (request.method=="POST"):
+        form= InmobiliariosForm(request.POST)
+        print(form)
+        if form.is_valid():
+            info = form.cleaned_data
+            direccion= info["direccion"]
+            localidad= info["localidad"]
+            mt2=info["mt2"]
+
+            form= Inmobiliarios(direccion=direccion, localidad=localidad, mt2=mt2)
+            form.save()
+            return render (request, "C:/Users/Matias/cluster_python/cluster/MVT_Grupo_Melo_Bañak/mvt_mb/AppFamiliares/Templates/inicio.html")
+    else:
+        form=InmobiliariosForm()
+        
+    return render(request, "C:/Users/Matias/cluster_python/cluster/MVT_Grupo_Melo_Bañak/mvt_mb/AppFamiliares/Templates/FormInmobiliarios.html", {"formulario":form})

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import familiar2, familiar1, familiar3, inicio, Familiares, Negocios, Inmobiliarios, FamiliaresFormulario
+from .views import familiar2, familiar1, familiar3, inicio, Familiares, Negocios, Inmobiliarios, FamiliaresFormulario, NegociosFormulario, InmobiliariosFormulario
 
 urlpatterns = [
     path('familiar1/',familiar1),
@@ -10,6 +10,7 @@ urlpatterns = [
     path('Negocios/', Negocios, name='Negocios'),
     path('Inmobiliarios/', Inmobiliarios, name='Inmobiliarios'),
     path('FamiliaresFormulario', FamiliaresFormulario, name= 'FamiliaresFormulario'),
-
+    path('NegociosFormulario', NegociosFormulario, name= 'NegociosFormulario'),
+    path('InmobiliariosFormulario', InmobiliariosFormulario, name= 'InmobiliariosFormulario'),
 
 ]
